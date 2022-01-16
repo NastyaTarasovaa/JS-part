@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button_previous {
+            width: 30px;
+        }
+
+        #button_next {
+
+            width: 30px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="slider-wrapper">
+
+        <div id="slider">
+            <img id="cat" src="assets/images/000029_1624895113_448053_big.jpg" onClick="changeMe()">
+        </div>
+
+        <img id="button_previous" src="assets/images/109618.png">
+        <img id="button_next" src=" assets/images/109617.png">
+    </div>
+    <script>
+        function changeMe() {
+            let cat = document.getElementById('cat');
+            cat.src = "https://vedom.ru/p/1lngzax0GGHBvXO-NVc01g/r630x420,q94/cZBVSpj1RKKKg5WuamStlg";
+        }
+    </script>
+</body>
+
+
+</html>

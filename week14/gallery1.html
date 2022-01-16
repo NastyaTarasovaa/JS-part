@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <a href="#" onclick="slide(-1)">Назад</a> | <a href="#" onclick="slide(1)">Вперед</a>
+        <img id="pic" src="assets/images/000029_1624895113_448053_big.jpg"
+            style="position:absolute; left:10%; top:20%" />
+
+    </div>
+    <script>
+        let index = 0;
+        let links = new Array(
+            "https://cdn24.img.ria.ru/images/151546/28/1515462835_0:0:1036:587_600x0_80_0_0_a75f922e8b052d966122e1c9dc40feb4.jpg",
+            "https://www.tvr.by/upload/iblock/42d/42d1898756e574fcaf9b7519c354ce9c.jpg",
+            "https://topspb.tv/media/768x432/news_covers/ermit_eu41VUl.jpg"
+        );
+
+        function slide(v) {
+            let element = document.getElementById("pic");
+            index += 1 * v;
+
+            if (index > links.length - 1) index = 0;
+            else if (index < 0) index = links.length - 1;
+            element.src = links[index];
+        }
+    </script>
+</body>
+
+</html>
