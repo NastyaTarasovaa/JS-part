@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" a href="assets/styles/form.css">
+</head>
+
+<body>
+    <div class="form-wrap">
+        <div class="profile"><img src="https://html5book.ru/wp-content/uploads/2016/10/profile-image.png">
+            <h1>Регистрация</h1>
+        </div>
+        <div>
+            <label for="name">Имя</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="surname">Фамилия</label>
+            <input type="text" id="surname">
+        </div>
+        <div>
+            <label for="sex">Пол</label>
+            <input type="text" id="sex">
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="country">Страна проживания</label>
+            <input type="text" id="country">
+        </div>
+        <div id="errorMessage"></div>
+        <div>
+            <button onclick="check ()"> Отправить </button>
+            </form>
+        </div>
+        <script>
+            function check() {
+                let name = document.getElementById("name");
+                let surname = document.getElementById("surname");
+                let sex = document.getElementById("sex");
+                let email = document.getElementById("email");
+                let country = document.getElementById("country");
+
+                document.getElementById('errorMessage').innerHTML = "";
+
+                if (name.value == '') {
+                    document.getElementById('errorMessage').innerHTML += "Ваше имя не указано </br>";
+                }
+
+                if (surname.value == '') {
+                    document.getElementById('errorMessage').innerHTML += "Ваша фамилия не указана </br>";
+                }
+
+                if (sex.value == '') {
+                    document.getElementById('errorMessage').innerHTML += "Ваш возраст не указан </br>";
+                }
+
+                if (email.value == '') {
+                    document.getElementById('errorMessage').innerHTML += "Ваша почта не указана </br>";
+                }
+
+                if (country.value == '') {
+                    document.getElementById('errorMessage').innerHTML += "Ваша страна не указана </br>";
+                } else {
+                    alert(`Добро пожаловать, ${name.value}!`);
+                }
+            }
+        </script>
+</body>
+
+
+
+</html>
