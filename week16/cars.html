@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <form class="container rounded">
+        <div class="form-group colortitle">
+            <label class="text-center">Калькулятор расчета стоимости автомобиля</label>
+        </div>
+        <div class="form-group">
+            <label for="brandcar">Марка автомобиля</label>
+            <select class="form-control" id="brandcar">
+                <option value="3" selected>Audi</option>
+                <option value="4">BMW</option>
+                <option value="5">Mercedes-Benz</option>
+                <option value="2">Toyota</option>
+                <option value="1">Volkswagen</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="year">Год выпуска</label>
+            <input type="text" class="form-control" id="year" placeholder="2000">
+        </div>
+        <div class="form-group">
+            <label for="mileage">Пробег, км</label>
+            <input type="text" class="form-control" id="mileage" placeholder="1000">
+        </div>
+        <div class="form-group">
+            <label for="bodytype">Тип кузова</label>
+            <select class="form-control" id="bodytype">
+                <option value="300" selected>Универсал</option>
+                <option value="200">Седан</option>
+                <option value="250">Хетчбэк</option>
+                <option value="400">Внедорожник</option>
+                <option value="500">Пикап</option>
+            </select>
+        </div>
+        <fieldset class="form-group" id="fueltype">
+            <label>Тип топлива</label>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="fuelRadio" id="radio1" value="petrol" checked>
+                    Бензин</label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="fuelRadio" id="radio2" value="diesel">
+                    Дизельное топливо </label>
+            </div>
+            <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="fuelRadio" id="radio3" value="electric">
+                    Электрический</label>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <label for="enginesize">Объем двигателя, л</label>
+            <input type="text" class="form-control" id="enginesize" placeholder="1.2" value="1.2">
+        </div>
+        <div class="form-group">
+            <label for="power">Мощность, л.с.</label>
+            <input type="text" class="form-control" id="power" placeholder="130" value="130">
+        </div>
+        <div class="form-group">
+            <label for="transmission">Коробка передач</label>
+            <select multiple class="form-control" id="transmission">
+                <option value="3" selected>Механическая</option>
+                <option value="4">Автоматизированная</option>
+                <option value="2">Роботизированная</option>
+                <option value="2">Вариаторная</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn btnstyle text-center" onclick="calcPrice()">Рассчитать</button>
+    </form>
+
+
+    <script src="cars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
