@@ -1,21 +1,25 @@
-function Calculator() {
 
-    this.read = function() {
-      this.a = +prompt('a?', 0);
-      this.b = +prompt('b?', 0);
-    };
-  
-    this.sum = function() {
-      return this.a + this.b;
-    };
-  
-    this.mul = function() {
-      return this.a * this.b;
-    };
+
+let num1 = Number(document.getElementById('num1').value);
+let num2 = Number(document.getElementById('num2').value);
+let numbers = new Calculator(num1,num2);
+
+class Calculator {
+  constructor(num1, num2) {
+      this.num1 = num1;
+      this.num2 = num2;
   }
-  
-  let calculator = new Calculator();
-  calculator.read();
-  
-  alert( "Sum=" + calculator.sum() );
-  alert( "Mul=" + calculator.mul() );
+
+  static sum(numbers) {
+  return (numbers.num1 + numbers.num2);
+  }
+  static sub(numbers) {
+      return numbers.num1 - numbers.num2;
+  }
+  static mult(numbers) {
+      return numbers.num1 * numbers.num2;
+  }
+  static div(numbers) {
+      return numbers.num1 / numbers.num2;
+  }
+}
