@@ -6,6 +6,10 @@ class Cat {
     }
 }
 
-let cats = [];
-let input = document.querySelector('input');
-console.log(input.value);
+function addCat () {
+    let name = document.getElementById("name").value;
+    let name2 = document.getElementById("name2").value;
+    let phone = document.getElementById("phone").value;
+}
+let cat = new Cat (name, name2, phone);
+console.log(cat);
