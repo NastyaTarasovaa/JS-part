@@ -87,13 +87,16 @@ document.addEventListener("DOMContentLoaded", function(event){
     let superheroesContent = "";
     for (let superhero of superheroes) {
         superheroesContent += `<div class ='superhero'>
+        <img class="card-img-top" src=${superhero.photo}
+        alt="Card image cap">
         <h5>${superhero.name}</h5>
         <p class="card-text">Вселенная: ${superhero.universe}</p>
         <p class="card-text">Альтер эго: ${superhero.ego}</p>
         <p class="card-text">Род деятельности: ${superhero.activity}</p>
         <p class="card-text">Друзья: ${superhero.friends}</p>
         <p class="card-text">Суперсилы: ${superhero.strength}</p>
-        </div>`;
+        <a href="#" class="btn btn-primary">Оценить</a>
+        </div> `;
         
 }
 document.getElementById("superheroes").innerHTML = superheroesContent;
