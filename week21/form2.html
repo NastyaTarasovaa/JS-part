@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Опросник</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1818/1818401.png" type="image/svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        input:required:valid {
+            border-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Опросник для обладателей котиков</h1>
+    <form id="formElem">
+        <div>
+            <label for="name"><b>Кличка питомца</b></label>
+            <input type="text" id="name" placeholder="Pet's name" required />
+        </div>
+
+        <div>
+            <label for="name"><b>Имя владельца</b></label>
+            <input type="text" id="name2" placeholder="Your name" required />
+        </div>
+        <div>
+            <label for="name"><b>Контакты владельца</b></label>
+            <input type="tel" id="phone" placeholder="+7(...)-...-...." required />
+        </div>
+        <label for="name"><b>Пол питомца</b></label><br>
+        Самец<input type="radio" name="sex" /><br>
+        Самка<input type="radio" name="sex" />
+        </div>
+        <div>
+            <label for="name"><b>Порода</b></label>
+            <select>
+                <option value="1">Бенгальская</option>
+                <option value="2">Кимрик</option>
+                <option value="3">Мейкун</option>
+                <option value="4">Персидская</option>
+            </select>
+        </div>
+        <div>
+            <label for="name"><b>Питание</b></label><br>
+            <input type="checkbox" name="food" value="1" />Сухой корм<br>
+            <input type="checkbox" name="food" value="2" />Влажный корм<br>
+            <input type="checkbox" name="food" value="3" />Натуральный корм<br>
+        </div>
+        <label for="name"><b>Комментарий:</b></label><br>
+        <textarea rows="10" cols="20"></textarea><br>
+        </div>
+        <div>
+            <label for="name"><b>Фото питомца</b></label><br>
+            <input type="file" /><br>
+        </div>
+        <button type="submit" id="postButton"><b>Сохранить</b></button>
+        <script src="form2.js"></script>
+    </form>
+</body>
+
+</html>
