@@ -5,9 +5,6 @@ postButton.onclick = function (e) {
         {
             method: 'POST',
             body: new FormData(formElem),
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-            },
         })
         .then(response => response.json())
         .then(user => {
