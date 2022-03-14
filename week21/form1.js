@@ -4,7 +4,10 @@ btn.onclick = function (event) {
 
     let user = {
         name: document.getElementById("name").value,
-        surname: document.getElementById("surname").value
+        surname: document.getElementById("surname").value,
+        sex:  document.getElementById("sex").value,
+        email:  document.getElementById("email").value,
+        country:  document.getElementById("country").value
     }
     console.log(user);
 
